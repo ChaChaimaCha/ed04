@@ -9,13 +9,14 @@ import java.util.*;
  * @since 06/03/2024
  * @see Contacto
  */
-public class Agenda {
+public class Agenda implements InterfazAgenda {
     private List<Contacto> contacts; // Lista de Contacto
 
     public Agenda() {
         this.contacts = new ArrayList<>();
     }
 
+    @Override
     public void addContact(String name, String phone) {
         boolean exists = false;
         for (Contacto c : contacts) {
@@ -32,6 +33,7 @@ public class Agenda {
         }
     }
 
+    @Override
     public void removeContact(String name) {
         Iterator<Contacto> it = contacts.iterator();
 
@@ -44,6 +46,7 @@ public class Agenda {
         }
     }
 
+    @Override
     public void modifyPhoneNumber(String name, String oldPhone, String newPhone) {
         for (Contacto c : contacts) {
             if (c.getPersona().equalsIgnoreCase(name)) {
@@ -58,6 +61,7 @@ public class Agenda {
         }
     }
 
+    @Override
     public List<Contacto> getContacts() {
         return this.contacts;
     }
