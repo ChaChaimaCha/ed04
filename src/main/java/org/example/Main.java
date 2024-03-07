@@ -3,6 +3,12 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         // Crear una nueva agendaContactos.
+        initAgenda();
+
+
+    }
+
+    private static void initAgenda() {
         Agenda agendaContactos = new Agenda();
 
         // Añadir contactos a la agendaContactos.
