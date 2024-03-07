@@ -19,7 +19,7 @@ public class Agenda {
     public void addContact(String name, String phone) {
         boolean exists = false;
         for (Contacto c : contacts) {
-            if (c.getName().equalsIgnoreCase(name)) {
+            if (c.getPersona().equalsIgnoreCase(name)) {
                 exists = true;
                 c.getPhones().add(phone);
                 break;
@@ -38,7 +38,7 @@ public class Agenda {
         while (it.hasNext()) {
             Contacto c = it.next();
 
-            if (c.getName().equalsIgnoreCase(name)) {
+            if (c.getPersona().equalsIgnoreCase(name)) {
                 it.remove();
             }
         }
@@ -46,7 +46,7 @@ public class Agenda {
 
     public void modifyPhoneNumber(String name, String oldPhone, String newPhone) {
         for (Contacto c : contacts) {
-            if (c.getName().equalsIgnoreCase(name)) {
+            if (c.getPersona().equalsIgnoreCase(name)) {
                 List<String> phones = c.getPhones();
 
                 int index = phones.indexOf(oldPhone);

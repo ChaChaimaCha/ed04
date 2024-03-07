@@ -10,25 +10,25 @@ import java.util.List;
  * @see Agenda
  */
 class Contacto {
-    private String name;
+    private String Persona;
     private List<String> phones;
 
-    public Contacto(String name, String phone) {
-        this.setName(name);
+    public Contacto(String Persona, String phone) {
+        this.setPersona(Persona);
         this.setPhones(new ArrayList<>());
         this.getPhones().add(phone);
     }
 
-    public String getName() {
-        return this.name;
+    public String getPersona() {
+        return this.Persona;
     }
 
     public List<String> getPhones() {
         return this.phones;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPersona(String persona) {
+        this.Persona = persona;
     }
 
     public void setPhones(List<String> phones) {
